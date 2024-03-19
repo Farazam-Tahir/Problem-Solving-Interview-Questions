@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        function pythagorenTriplet(x,y,z) {
+            let a = Math.max(x,y,z);
+            let b,c;
+            if (a == x) {
+                b = y;
+                c = z;
+            }else if (a == y) {
+                b = x;
+                c = z;
+            }else{
+                b = x;
+                c = y;
+            }
+
+            if (a*a == (b*b + c*c)) {
+                console.log("yes, it is pythagorean triplet");
+            }else{
+                console.log("not a pythagorean triplet");
+            }
+        }
+
+        let x=3,y=4,z=5;
+        pythagorenTriplet(x,y,z);
+    </script>
+</body>
+</html>
